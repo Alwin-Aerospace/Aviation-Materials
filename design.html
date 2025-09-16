@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Materials</title>
+    
+    
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!--My Css-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<body>
+<!--Navbar-->
+<nav class="navbar"> 
+    <h1 class="h1-size">Future of Aviation Materials</h1>
+
+
+    <div class="navbar-links">
+        <p class="navbar-link"><a href="index.html">Home</a></p>
+         <p class="navbar-link"><a href="procedure.html">Procedure</a></p>
+          <p class="navbar-link"><a href="design.html">Design</a></p>
+          <p class="navbar-link"><a href="simulation.html">Simulation</a></p>
+          <p class="navbar-link"><a href="results.html">Results</a></p>
+          <p class="navbar-link"><a href="conclusion.html">Conclusion</a></p>
+          <p class="navbar-link"><a href="about us.html">About Us</a></p>
+
+    </div>
+
+    <div class="navbar-menu-toggle" onclick="showNavbar()"> 
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</nav>
+
+
+<!--Side Navbar-->
+<div class="side-navbar">
+    <p style="text-align: right;">
+        <i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+    </p>
+
+<div class="side-navbar-links">
+        <p class="side-navbar-link"><a href="index.html">Home</a></p>
+         <p class="side-navbar-link"><a href="procedure.html">Procedure</a></p>
+          <p class="side-navbar-link"><a href="design.html">Design</a></p>
+          <p class="side-navbar-link"><a href="simulation.html">Simulation</a></p>
+          <p class="side-navbar-link"><a href="results.html">Results</a></p>
+          <p class="side-navbar-link"><a href="conclusion.html">Conclusion</a></p>
+          <p class="side-navbar-link"><a href="about us.html">About Us</a></p>
+
+
+</div>
+
+</div>
+
+
+<div class="content1">
+<h2>Design using CATIA V5</h2>
+</div>
+<div class="ne">
+<h3 class="me">Existing Panel :</h3>
+
+  
+    <p class="sgf">1. Start a New Part</p>
+    <ul class="sgf">
+    <li>Open CATIA V5</li>
+    <li>Go to File > New and select Part to create a new part file</li>
+    </ul>
+    <p class="sgf">2. Create the Panel</p>
+    <ul class="sgf">
+<li>Go to the Sketcher workbench, and select the XY Plane to start
+sketching.</li>
+<li>Draw a rectangle with the length of 1.5 ft and width of 0.75 ft. Convert
+these to inches (1 ft = 12 inches):
+Length: 1.5 x 12 = 18 inches
+Width: 0.75 x 12 = 9inches</li>
+<li>Exit the sketch</li>
+<li>Go to the Pad feature and specify the panel's height as 0.175 ft
+(convert to inches: 0.175 x 12 = 2.1 inches. )</li>
+<li>Click OK to create the solid panel.</li>
+    </ul>
+
+<img class= "img4"src="img/IMG_20240819_142031.jpg"width="600px"height="300px">
+<img class="img" src="img/IMG_20240819_142049.jpg"width="600px"height="300px">
+
+
+<p class="sgf">3. Add the Honeycomb Structure
+To create a honeycomb with a wall thickness of 0.125 inches and a cell size of
+0.03 inches: </p>
+<ul class="sgf">
+<li>In the Sketcher workbench, select the top face of the panel.</li>
+<li> Draw a hexagon with a cell size of 0.03 inches (this is the distance across the
+hexagon).</li>
+<li>Use the Rectangular Pattern or Circular Pattern tool to replicate the
+hexagon pattern across the surface of the panel.</li>
+<li>the sketch.</li>
+<li> the Pocket feature to extrude the honeycomb cut through the thickness
+of the panel (0.125 inches).</li>
+<li> Pattern is set to cover the entire panel surface and adjust the spacing
+as necessary.</li>
+<li>Use Save As to store the completed design.</li>
+    </ul>
+</p>
+
+
+<h3 class="me">Innovative Panel :</h3>
+
+<p class="sgf">1. Start a New Part</p>
+<ul class="sgf">
+
+<li> Open CATIA V5</li>
+<li>Go to File > New and select Part to create a new part file </li> 
+</ul>
+
+<p class="sgf"> 2. Create the Base Panel Layer</p>
+<ul class="sgf">
+<li>Go to the Sketcher workbench and select the XY Plane</li>
+<li>Draw a rectangle for the base layer with the required length and width:
+Length: 1.5 ft (convert to inches: 1.5 x 12=18 inches)
+Width: 0.75 ft (convert to inches: 0.75 x 12= 9 inches)</li>
+<li>Exit the sketch</li>
+<li>In the Part Design workbench, use the Pad feature to extrude the rectangle to the
+specified height:
+Height: 0.175 ft (convert to inches: 0.175 x 12=2.1 inches).</li>
+</ul>
+
+
+<img class ="img5" src="img/IMG_20240819_142140.jpg"width="600px"height="300px">
+<img class="img" src="img/IMG_20240819_142218.jpg" width="600px"height="300px">
+
+
+<p class="sgf">3. Duplicate the Layer for a 5-Layer Panel</p>
+<ul class="sgf">
+<li>Select the base panel layer created in the previous step</li>
+<li>Go to Insert > Transformations > Translation to create a copy of the layer</li>
+<li>In the Translation options:
+Select Upward (along the Z-axis).
+Set the distance to 2.1 inches (the height of each layer).
+Set the Instances to 5 (to create five layers in total).</li>
+<li>Click OK to apply the transformation.</li>
+</ul>
+
+<p class="sgf">4. Final Adjustments and Assembly</p>
+<ul class="sgf">
+<li>You should now have five identical layers stacked vertically with the
+specified dimensions.</li>
+<li>Use Assembly constraints if required to adjust the alignment of the layers
+precisely</li>
+<li>Save the completed design by going to File > Save As.</li>
+</ul>
+
+  </div>
+
+<button class="btn3" onclick="change3()">Next Page - 4</button>
+
+
+<script src="index.js"> </script>
