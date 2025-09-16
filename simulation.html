@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Materials</title>
+    
+
+    
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!--My Css-->
+    <link rel="stylesheet" href="style.css">
+
+      
+
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+
+<body>
+<!--Navbar-->
+<nav class="navbar"> 
+    <h1 class="h1-size">Future of Aviation Materials</h1>
+
+
+    <div class="navbar-links">
+        <p class="navbar-link"><a href="index.html">Home</a></p>
+         <p class="navbar-link"><a href="procedure.html">Procedure</a></p>
+          <p class="navbar-link"><a href="design.html">Design</a></p>
+          <p class="navbar-link"><a href="simulation.html">Simulation</a></p>
+          <p class="navbar-link"><a href="results.html">Results</a></p>
+          <p class="navbar-link"><a href="conclusion.html">Conclusion</a></p>
+          <p class="navbar-link"><a href="about us.html">About Us</a></p>
+
+
+
+    </div>
+
+    <div class="navbar-menu-toggle" onclick="showNavbar()"> 
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</nav>
+
+
+<!--Side Navbar-->
+<div class="side-navbar">
+    <p style="text-align: right;">
+        <i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+    </p>
+
+<div class="side-navbar-links">
+        <p class="side-navbar-link"><a href="index.html">Home</a></p>
+         <p class="side-navbar-link"><a href="procedure.html">Procedure</a></p>
+          <p class="side-navbar-link"><a href="design.html">Design</a></p>
+          <p class="side-navbar-link"><a href="simulation.html">Simulation</a></p>
+          <p class="side-navbar-link"><a href="results.html">Results</a></p>
+          <p class="side-navbar-link"><a href="conclusion.html">Conclusion</a></p>
+          <p class="side-navbar-link"><a href="about us.html">About Us</a></p>
+
+</div>
+
+</div>
+
+
+<div class="content1">
+<h2 >Simulation using ANSYS</h2>
+</div>
+<div class="ne">
+<h3 class="me">Existing Panel :</h3>
+
+<p class="sgf">Step-1 Pre-Processing in ANSYS 
+    <p class="sgf"> 1. Import Geometry : Make sure the geometry is correctly imported from CATIA
+into ANSYS, and verify the dimensions.</p>
+</p>
+<p class="sgf">2. Define Materials</p>
+<p class="sgf"> S-Glass Fiber :</p>
+<ul class="sgf">
+    <li >Define properties like Young’s modulus, Poisson’s ratio, density, and strength.</li>
+    <li >S-glass fiber is anisotropic, so you may need to define its orthotropic or
+anisotropic properties.</li>
+</ul>
+
+
+
+<p class="sgf"> Aramid Honeycomb :</p>
+<ul class="sgf">
+    <li >Define properties like Young’s modulus, shear modulus, density, and failure
+criteria specific to aramid.</li>
+    <li >Aramid honeycomb structures often have orthotropic properties due to their
+fiber orientation and cellular structure.</li>
+</ul>
+
+<p class="sgf">3. Set Up Composite Layers :</p>
+<ul class="sgf">
+    <li >In the Composite Pre-Processor in ANSYS, define a 3-layer setup:
+Layer 1 (Top): S-glass fiber.
+Layer 2 (Middle): Aramid honeycomb core.
+Layer 3 (Bottom): S-glass fiber.</li>
+    <li >Specify the thickness of each layer is 0.175 ft, assign thickness values accordingly,
+ensuring the honeycomb layer occupies the middle position.
+For the honeycomb layer, you may need to use shell or beam elements to capture the
+cellular structure accurately.</li>
+</ul>
+
+
+<p class="sgf">4. Mesh Generation :</p>
+<p class="sgf">Generate a mesh with a finer resolution at the honeycomb core for accurate stress
+distribution analysis. Shell elements work well for the honeycomb core and
+laminated surfaces.</p>
+
+
+
+
+<p class="sgf">Step-2: Setting Up the Analysis 
+    <p class="sgf"> 1. Compression Test</p>
+</p>
+
+<ul class="sgf">
+    <li >Boundary Conditions : Fix one end of the panel and constrain the opposite end
+where the compressive load of 10,000 N will be applied.</li>
+
+<li >Loading: Apply the compressive load of 10,000 N on the opposite end.</li>
+<li>Analysis Settings: Choose Static Structural Analysis and enable large deformation
+settings if the honeycomb core has significant deformation.</li>
+<li>Solution Outputs: Request outputs for total deformation , equivalent stress and
+equivalent strain.</li>
+
+<img class ="img6" src="img/Screenshot (17).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (16).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (15).png"width="350px"height="200px">
+
+<p class="sgf"> 2. Impact Test</p>
+
+<li>Boundary Conditions: Fix the panel edges or support the panel based on the test
+setup.</li>
+<li>Loading: Use an impulse force to simulate the impact. If the impact speed is known,
+specify it as an initial velocity; otherwise, apply an impulse equivalent to the
+expected impact load.</li>
+<li>Analysis Type: Use Explicit Dynamics for the impact. Explicit dynamics is usually
+preferable for handling complex impact events.</li>
+<li>Solution Outputs: Total deformation , equivalent stress and equivalent strain.</li>
+
+<img class ="img7" src="img/Screenshot (23).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (22).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (21).png"width="350px"height="200px">
+
+
+
+<p class="sgf"> 3. Tensile Test (100mm Displacement)</p>
+<li>Boundary Conditions: Fix one end of the panel and apply a displacement boundary
+condition of 100 mm to the opposite end.</li>
+<li>Boundary Conditions: Fix one end of the panel and apply a displacement boundary
+condition of 100 mm to the opposite end.</li>
+<li>Loading: Instead of applying a force, apply a displacement of 100 mm in the tensile
+direction.</li>
+<li>Analysis Type: Use Static Structural Analysis to account for the material and
+geometric nonlinearity.</li>
+<li>Solution Outputs: Total deformation , equivalent stress and equivalent strain.</li>
+
+<img class ="img8" src="img/Screenshot (20).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (19).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (18).png"width="350px"height="200px">
+
+
+
+<p class="fg">Step-3: Solving the the Analysis 
+</p>
+    <ul class="fg">
+    <li>Solve each test separately. For impact and tensile tests, you may need to enable
+large deformations and contact nonlinearity (especially for bonded layers).</li>
+<li>Monitor the solution for any convergence issues, particularly in transient
+dynamics or explicit simulations for the impact test.</li>
+</ul>
+
+
+
+<h3 class="me">Innovative Panel :</h3>
+
+<p class="sgf">Step-1 Pre-Processing in ANSYS 
+    <p class="sgf"> 1. Import Geometry :  Make sure the geometry is correctly imported from CATIA
+into ANSYS, and verify the dimensions.</p>
+
+
+<p class="sgf">2. Define Materials</p>
+<p class="sgf"> Aramid Fiber (1st & 5th layers):</p>
+<ul class="sgf">
+    <li >Define material properties for aramid fiber, including Young’s modulus,
+Poisson’s ratio, density, and strength parameters.</li>
+</ul>
+
+
+<p class="sgf"> S-Glass Fiber (2nd and 4th layers)::</p>
+<ul class="sgf">
+    <li >Define orthotropic or anisotropic properties as required for S-glass fiber.</li>
+</ul>
+
+
+<p class="sgf"> Carbon Fiber (3rd layer):</p>
+<ul class="sgf">
+    <li >Define properties for carbon fiber, considering its high stiffness and strength.
+Carbon fiber is also anisotropic, so define its directional properties based on
+the orientation.</li>
+</ul>
+
+
+<p class="sgf">Mesh Generation :</p>
+<ul class="sgf">
+    <li >Use a fine mesh to accurately capture stress and strain distributions,
+especially around interfaces between different layers.
+For complex composite structures, use shell or layered solid elements to
+accurately model each layer.</li>
+</ul>
+
+
+<div class="sgfm"></div>
+
+<p class="sgfm">Step-2: Setting Up the Analysis 
+    <p class="sgfm"> 1. Compression Test</p>
+</p>
+
+<ul class="sgfm">
+    <li >Boundary Conditions : Fix one end of the panel.Apply a compressive load of 10,000 N uniformly on
+the opposite end.</li>
+
+<li >Analysis Settings: Use Static Structural Analysis. Enable large deformation
+settings if significant deformation is expected.</li>
+<li>Outputs: Specify total deformation, equivalent stress, and equivalent strain as
+solution outputs.</li>
+</ul>
+
+<img class ="img9" src="img/Screenshot (11).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (10).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (9).png"width="350px"height="200px">
+
+
+ <p class="sgfm"> 2. Impact Test</p>
+</p>
+
+<ul >
+    <li >Boundary Conditions : Fix the panel’s edges or apply supports based on the experimental setup.</li>
+    <li >Loading:
+Define an impact load as an initial velocity if you know the impact speed or as an
+equivalent impulse force over a short duration.</li>
+    <li >Analysis Type: Use Explicit Dynamics to handle the high-rate loading conditions
+of impact.</li>
+<li >Outputs: Specify total deformation, equivalent stress, and equivalent strain at key
+time steps to observe stress waves and peak responses.</li>
+</ul>
+
+
+<img class ="img10" src="img/Screenshot (8).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (7).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (6).png"width="350px"height="200px">
+
+
+
+<p class="sgfm"> 3. Tensile Test</p>
+</p>
+
+<ul >
+    <li >Boundary Conditions :Fix one end of the panel.Apply a 100 mm displacement boundary condition on
+the opposite end. </li>
+    <li >Loading: Instead of applying a force, apply the prescribed displacement to achieve
+tensile loading. </li>
+    <li >Analysis Type: Use Static Structural Analysis to account for large deformations
+if necessary.</li>
+    <li >Outputs: Request total deformation, equivalent stress, and equivalent strain for
+analysis.</li>
+
+    
+<img class ="img11" src="img/Screenshot (14).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (13).png"width="350px"height="200px">
+<img class ="img" src="img/Screenshot (12).png"width="350px"height="200px">
+
+
+
+<p class="fg">Step-3: Solving the the Analysis 
+</p>
+    <ul class="fg">
+    <li>Run each simulation separately to ensure the solver handles each load case
+effectively.</li>
+<li>For the impact analysis, choose a small time step to capture the transient
+effects accurately.</li>
+</ul>
+
+
+</p>
+</ul>
+
+</ul>
+</div>
+
+<button class="btn5"onclick=change5()>Next Page 5</button>
+
+
+<script src="index.js"></script>
