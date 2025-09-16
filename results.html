@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Materials</title>
+    
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Poppins&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+    <!--My Css-->
+    <link rel="stylesheet" href="style.css">
+
+      
+
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+
+<body>
+<!--Navbar-->
+<nav class="navbar"> 
+    <h1 class="h1-size">Future of Aviation Materials</h1>
+
+
+    <div class="navbar-links">
+        <p class="navbar-link"><a href="index.html">Home</a></p>
+         <p class="navbar-link"><a href="procedure.html">Procedure</a></p>
+          <p class="navbar-link"><a href="design.html">Design</a></p>
+          <p class="navbar-link"><a href="simulation.html">Simulation</a></p>
+          <p class="navbar-link"><a href="results.html">Results</a></p>
+          <p class="navbar-link"><a href="conclusion.html">Conclusion</a></p>
+          <p class="navbar-link"><a href="about us.html">About Us</a></p>
+
+
+
+    </div>
+
+    <div class="navbar-menu-toggle" onclick="showNavbar()"> 
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+
+</nav>
+
+
+<!--Side Navbar-->
+<div class="side-navbar">
+    <p style="text-align: right;">
+        <i class="fa-solid fa-xmark" onclick="closeNavbar()"></i>
+    </p>
+
+<div class="side-navbar-links">
+        <p class="side-navbar-link"><a href="index.html">Home</a></p>
+         <p class="side-navbar-link"><a href="procedure.html">Procedure</a></p>
+          <p class="side-navbar-link"><a href="design.html">Design</a></p>
+          <p class="side-navbar-link"><a href="simulation.html">Simulation</a></p>
+          <p class="side-navbar-link"><a href="results.html">Results</a></p>
+          <p class="side-navbar-link"><a href="conclusion.html">Conclusion</a></p>
+          <p class="side-navbar-link"><a href="about us.html">About Us</a></p>
+
+
+</div>
+
+</div>
+
+<div class="ty">
+<h2 class="content1">Comparison of Results</h2>
+
+
+
+<h3 class="me">Total Deformation</h3>
+
+
+<form class="frm">
+    <table border="5" class="wh">
+<tr class="bg">
+    <td>Sample</td><td>Compression Test</td><td>Tensile Test</td><td>Impact Test</td>
+</tr>
+<tr>
+    <td>Existing panel in ANSYS</td><td>1.5205mm</td><td>13.932mm</td><td>0.00016183mm</td>
+</tr>
+<tr>
+    <td>Innovative panel in ANSYS</td><td>0.76906mm</td><td>13.27mm</td><td>1.856e-5mm</td>
+</tr>
+</form>
+</table>
+
+
+
+<h3 class="me">Equivalent Stress</h3>
+
+
+
+<form >
+    <table border="5" class="wh">
+<tr class="bg" >
+    <td>Sample</td><td>Compression Test</td><td>Tensile Test</td><td>Impact Test</td>
+</tr>
+<tr>
+    <td>Existing panel in ANSYS</td><td>3.5957e5 Mpa</td><td>4.0579e6 Mpa</td><td>0.015205 Mpa</td>
+</tr>
+<tr>
+    <td>Innovative panel in ANSYS</td><td>8310.2 Mpa</td><td>5.9082e5 Mpa</td><td>0.042634 Mpa</td>
+</tr>
+</form>
+</table>
+
+
+
+<h3 class="me">Equivalent Strain</h3>
+
+
+
+<form class="">
+    <table border="5" class="wh">
+<tr class="bg">
+    <td>Sample</td><td>Compression Test</td><td>Tensile Test</td><td>Impact Test</td>
+</tr>
+<tr>
+    <td>Existing panel in ANSYS</td><td>2.1198e-02 mm</td><td>1.9912 mm</td><td>2.4574e-5 mm</td>
+</tr>
+<tr>
+    <td>Innovative panel in ANSYS</td><td>3.3827e-2 mm</td><td>2.4525 mm</td><td>9.9802e-7 mm</td>
+</tr>
+</form>
+</table>
+
+</div>
+
+
+<button class="btn6"onclick=change6()>Next Page 6</button>
+
+
+<script src="index.js"></script>
